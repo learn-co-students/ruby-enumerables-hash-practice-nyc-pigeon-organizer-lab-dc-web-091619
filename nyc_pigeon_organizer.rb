@@ -3,12 +3,10 @@ def nyc_pigeon_organizer(data)
   list_of_names = []
   data[:gender].values.each{|list|
     list.each{|name|
-      if !list_of_names.include?(name)
-        list_of_names << name
-        pigeon_list[name] = {:color => [],
+      list_of_names << name
+      pigeon_list[name] = {:color => [],
         :gender => [],
-        :lives => []}
-      end}}
+        :lives => []}}}
       list_of_names.each{|name|
         data.keys.each{|item|
           paired_elems = data[item].to_a
