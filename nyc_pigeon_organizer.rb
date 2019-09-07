@@ -11,7 +11,7 @@ def nyc_pigeon_organizer(data)
           list[names][color_gender_lives]=[]
         end 
           list[names][color_gender_lives] << key.to_s
-        binding.pry
+
       end
     end
   end
