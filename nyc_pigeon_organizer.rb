@@ -1,17 +1,23 @@
-def nyc_pigeon_organizer(data)
-  hash = {}
-  data.each do | key, value|
-    value.each do | attributes, names |
-      names.each do | name |
-      if !hash[name]
-        hash[name] = { }
+require "pry"
+
+def nyc_pigeon_organizer(pigeon_data)
+  hash = { }
+  pigeon_data.each do |k, v|
+    v.each do |attributes, names|
+    names.each do |name|
+
+      if hash[name] == nil
+        hash[name] = {}
       end
-      if !hash[name][key]
-        hash[name][key] = [ ]
+      if hash[name][k] == nil
+        hash[name][k] = []
       end
-        hash[name][key] << attributes.to_s
-        end
+
+      hash[name][k] << attributes.to_s
+
       end
     end
-return hash
+  end
+hash
 end
+
